@@ -7,6 +7,7 @@ import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -23,9 +24,12 @@ public class SendFileEmail {
     }
 
 
-    public static void send(String html) {
+    public static void send(String html) throws IOException {
 
         String recipient = "pmarakko@cisco.com";
+
+        final Properties properties = new Properties();
+        properties.load(new FileInputStream(new File("email.properties")));
 
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -38,7 +42,7 @@ public class SendFileEmail {
         Session session = Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication("abarabascisco@gmail.com", "jasper2006");//change accordingly
+                        return new PasswordAuthentication(properties.getProperty("login"), properties.getProperty("pass"));//change accordingly
                     }
                 });
 
