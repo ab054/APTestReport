@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CCReportALL" verbose="1">
+
+    <test name="001NetworkCCreport">
+        <classes>
+            <class name="tests.CCreportsAll">
+            </class>
+        </classes>
+    </test>
+
+    <test name="002NetworkCCreport">
+        <classes>
+            <class name="tests.ReportConsolidation">
+            </class>
+        </classes>
+    </test>
+
+    <test name="003NetworkCCreport">
+        <classes>
+            <class name="tests.SendFileEmail">
+            </class>
+        </classes>
+    </test>
+
+</suite>
