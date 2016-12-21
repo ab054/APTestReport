@@ -46,6 +46,12 @@
             <version>1.4.7</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-htmlunit-driver</artifactId>
+            <version>2.48.2</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
@@ -60,7 +66,7 @@
                         <suiteXmlFile>testngAll.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
-                        <buildNumber>6.71</buildNumber>
+                        <buildNumber>6.77</buildNumber>
                         <teamName>Billing</teamName>
                     </systemPropertyVariables>
                 </configuration>

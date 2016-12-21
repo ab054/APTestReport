@@ -102,7 +102,7 @@ public class CCreportsAll extends TestBase {
     }
 
     @Test(parameters = {"buildNumber"})
-    public void ccReportGenerateWirelessQA(String buildNumber) {
+    public void ccReportWirelessQACC(String buildNumber) {
 
         String teamName = "Wireless QA";
 
@@ -116,8 +116,28 @@ public class CCreportsAll extends TestBase {
         clickOnApplyListSettings();
         selectAllTestSets();
         clickOnGenerateReportButton();
-        saveSummaryTable(teamName);
+        saveSummaryTable(teamName + " CC");
     }
+
+    @Test(parameters = {"buildNumber"})
+    public void ccReportGenerateWirelessQAw(String buildNumber) {
+
+        String teamName = "Wireless QA";
+
+        navigateToMainPage();
+        login();
+        choseWireless();
+        clickOnReporting();
+        clickOnFilterSession();
+        selectBuildNumberAs(buildNumber);
+        //selectTeamByName(teamName);
+        clickOnApplyListSettings();
+        selectAllTestSets();
+        clickOnGenerateReportButton();
+        saveSummaryTable(teamName + " wireless");
+    }
+
+
 
 
 }

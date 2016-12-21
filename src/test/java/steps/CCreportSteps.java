@@ -41,6 +41,10 @@ public class CCreportSteps extends TestBase {
         // scr.suitesPage.controlCenterLink().click();
     }
 
+    public static void choseWireless() {
+        driver.navigate().to("http://suzuki16.i.jaspersystems.com/atm/index.mpl?suite=Wireless");
+    }
+
     public static void clickOnReporting() {
         scr.menuPage.ReportingMenu().click();
 
@@ -104,7 +108,7 @@ public class CCreportSteps extends TestBase {
 
     public static void waitForElementXpath(String xpath) {
 
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+        WebDriverWait wait = new WebDriverWait(driver, 25);
 
         By desiredElement = By.xpath(xpath);
 
@@ -113,7 +117,7 @@ public class CCreportSteps extends TestBase {
 
     public static void waitForElementClassName(String className) {
 
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+        WebDriverWait wait = new WebDriverWait(driver, 25);
 
         By desiredElement = By.className(className);
 

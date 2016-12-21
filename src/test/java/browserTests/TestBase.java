@@ -7,7 +7,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import pages.BasePage;
 
@@ -31,12 +30,6 @@ public class TestBase {
                 new Object[]{"firefox", "46", "Windows 7"},
                 new Object[]{"chrome", "35", "OS X 10.9"},
         };
-    }
-
-    @BeforeSuite()
-    public void setUpDefault() throws MalformedURLException {
-
-
     }
 
     @BeforeMethod()

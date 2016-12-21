@@ -20,10 +20,9 @@ public class MenuPage {
         this.driver = driver;
     }
 
+
     public void navigate() {
-
         scr.menuPage.suitesLink().click();
-
     }
 
     public WebElement suitesLink() {

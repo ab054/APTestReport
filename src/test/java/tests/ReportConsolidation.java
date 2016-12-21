@@ -71,6 +71,7 @@ public class ReportConsolidation {
     private static void addBordersAndBackgroundColor(Document resultHtml) {
         resultHtml.getElementsByTag("head").append("<style>\n" +
                 "   table, th, td {\n" +
+                "    font-size: larger;\n" +
                 "    border: 1px solid black;\n" +
                 "    background-color: rgba(0, 0, 0, 0.16);\n" +
                 "   }\n" +

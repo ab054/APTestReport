@@ -42,7 +42,7 @@ public class SendFileEmail {
         Session session = Session.getDefaultInstance(props,
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(properties.getProperty("login"), properties.getProperty("pass"));//change accordingly
+                        return new PasswordAuthentication(properties.getProperty("login"), properties.getProperty("pass"));
                     }
                 });
 
